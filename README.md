@@ -1,4 +1,3 @@
-
 # <h1 align=center>**`Datathon - Machine Learning`**</h1>
 # <h3 align=center> **Proyecto de clasificacion con ML** </h3>
 <p align="center">
@@ -27,11 +26,11 @@ Hola! 👋 mi nombre es Lucas Maximiliano Seidl y este repositorio contiene mi p
 
 Un importante Centro de Salud lo ha contratado con el fin de poder predecir si un paciente tendrá una estancia hospitalaria prolongada o no. Para ello tenemos dos archivos csv, uno "train" con el cual vamos a entrenar nuestro modelo de ML y "test" en el cual vamos a aplicar el modelo realizado y conseguir las predicciones.  
 
-+ Entrenamiento y predicción utilizando un Modelo de Machine Learning adecuado al problema (clasificación o regresión).
-
 + Análisis exploratorio de los datos (EDA).
 
 + División de dataset en train y test utilizando train_test_split, CV, KFold o similares.
+
++ Entrenamiento y predicción utilizando un Modelo de Machine Learning adecuado al problema (clasificación o regresión).
 
 + Utilización de Pipelines en la producción del modelo.
 
@@ -75,25 +74,34 @@ https://docs.python.org/3/
 </p>
   
    
-  Un breve resumen de lo que esta comentado en nuestro notebook:    
-  - Primero se realizo un analisis exploratorio sobre el csv que ibamos a trabajar.  
-  - Se controlo la correlacion de los datos por medio de chi2_contingency que nos devuelve un p-valor correspondiente a la correlacion entre las columnas.  
-  - Una vez encontradas las columnas con las que queriamos trabajar se paso a normalizar los datos y usar un Pipeline que nos diga que modelo era mas optimo entre Arbol y regresion logistica, dando por resultado el Arbol.  
-  - Realice el proceso de entrenamiento del arbol y luego lo confirme con cross validation, dandome por resultado un accuracy de 70% y un recall de 88%.  
-  - Con nuestro modelo terminado se lo implemento en el "csv test" y se genero el csv con las predicciones.
+  Un breve resumen de lo que esta comentado en nuestro notebook:  
+  
+  - Primero se realizo análisis exploratorio de los datos (EDA) en el cual:
+  
+    - Se controlo la correlacion de los datos por medio de chi2_contingency la cual es una herramienta estadística que se utiliza para determinar si hay una relación significativa entre dos o más variables cualitativas.    
+    - Una vez encontradas las columnas con las que queriamos trabajar se paso a normalizar los datos mediante "get_dummis" y "LabelEncoder".  
+  - Se entreno x e y (dando mejores resutados con un random_state=32).
+  
+  - Usamos un Pipeline que nos diga que modelo nos daba un mejor rendimiento entre decisiontreeclassifier y regresion logistica, dando por resultado el decisiontreeclassifier. 
+  
+  - Realice el proceso de entrenamiento del Arbol (dando mejores resultados con depth=19), luego lo confirme con cross validation, dandome como resultado:
+  `Accuracy de 77% y un Recall de 83%.`
+  
+  - Con nuestro modelo terminado se lo implemento, prediciendo  "csv test" y se genero el csv con los resultados el cual subimos con el nombre "MaxiDS".  
   <hr>  
   
    ## **5-Observaciones**  
    
    - Se aplico "LabelEncoder" y no OneHotEncoder a la columna "Age" y "Severity of Illness" porque dio un mejor rendimiento en accuracy.  
    - Admission_Deposit (despues de testearlo con y sin esta columna se llego a la conclusion que no se va a eliminar ya que mejora el modelo).
+   - cuando se definde X_train e Y_train dan mejor resultados con un random_state=32.  
+   - El Arbol da mejor rendimiento con un depth= 19. 
    
    <hr>
    
    ## **6-Conclusiones**  
    
-   Este trabajo me abrio un nuevo orizonte en todo lo que es la programacion, hasta este punto no habia visto tan a profundidad como trabajar con modelos de ML. Aprendi a usar librerias como Sklearn y Scipy, tambien consolidar habilidades en pandas y numpy.  
-   Me voy muy contento de haber podido cumplir con los objetivos propuestos.  
+   Este trabajo me abrió un nuevo horizonte en todo lo que es la programación, hasta este punto no había visto tan en profundidad cómo trabajar con modelos de ML. Aprendí a usar librerías como Sklearn, y Scipy, también consolidar mis habilidades en pandas y numpy. Me voy muy contento de haber podido cumplir con los objetivos propuestos.  
    <hr>
    
 <p align="center">
