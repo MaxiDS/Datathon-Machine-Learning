@@ -80,7 +80,7 @@ https://docs.python.org/3/
     - Se hizo: verificacion de nulos y duplicados.  
     - Se controlo la correlacion de los datos por medio chi2_contingency la cual es una herramienta estadística que se utiliza para determinar si hay una relación significativa entre dos o más variables cualitativas.    
     - Una vez encontradas las columnas con las que queriamos trabajar se paso a normalizar los datos mediante "OneHotEncoder" y "LabelEncoder".  
-  - Se entreno x e y (dando mejores resutados con un random_state=32).
+  - Se entreno X e Y (dando mejores resutados con un random_state=32).
   
   - Usamos un Pipeline que nos diga que modelo nos daba un mejor rendimiento entre decisiontreeclassifier y regresion logistica, dando por resultado el decisiontreeclassifier. 
   
