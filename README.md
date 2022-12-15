@@ -84,23 +84,24 @@ https://docs.python.org/3/
   
    ## **5-Observaciones**  
    
-   - Se aplico "LabelEncoder" y no OneHotEncoder a la columna "Age" y "Severity of Illness" porque dio un mejor rendimiento en accuracy.  
-   - Admission_Deposit (despues de testearlo con y sin esta columna se llego a la conclusion que no se va a eliminar ya que mejora el modelo).
-   - cuando se definde X_train e Y_train dan mejor resultados con un random_state=32.  
-   - Usando gridserch nos arrojo los siguientes parametros para nuestra mejora en el Arbol: `'criterion': 'gini', 'max_depth': 19, 'random_state': 32, 'splitter': 'best'` 
-   - Nuestro modelo en produccion usando "csv test" como prueba dio los siguientes resultados: `Recall: 81.16%` y `Accuracy: 77.07`
+   Se aplicó LabelEncoder en lugar de OneHotEncoder a las columnas "Age" y "Severity of Illness" porque esto mejoró la precisión del modelo. Se decidió no eliminar la columna "Admission_Deposit" después de realizar pruebas ya que esto también mejoró el rendimiento del modelo.  
+   
+   Cuando se definen X_train e Y_train, se obtienen mejores resultados con un random_state=32. El uso de grid search nos permitió encontrar los siguientes parámetros óptimos para mejorar nuestro árbol de decisión: 'criterion': 'gini', 'max_depth': 19, 'random_state': 32, 'splitter': 'best'.  
+   
+   Finalmente, nuestro modelo en producción tuvo un rendimiento de Recall del 81,16% y Accuracy del 77,07% cuando se utilizó "csv test" como conjunto de datos de prueba.  
    
    <hr>
    
    ## **6-Conclusiones**  
    
-   Este trabajo me abrió un nuevo horizonte en todo lo que es la programación, hasta este punto no había visto tan en profundidad cómo trabajar con modelos de ML. Aprendí a usar librerías como Sklearn, y Scipy, mejorar el modelo usando Gridserch, también consolidar mis conocimientos en Arboles de decisiones🌳. Me voy muy contento de haber podido cumplir con los objetivos propuestos.  
+   Este trabajo me permitió ampliar mis conocimientos en programación y en el uso de librerías de machine learning como Sklearn y Scipy. Aprendí a mejorar el rendimiento de un modelo utilizando grid search y a profundizar en el uso de árboles de decisión. Me siento muy satisfecho de haber cumplido con los objetivos propuestos y de haber ampliado mis conocimientos en esta área.  
    <hr>
    
 <p align="center">
 <img src="https://miro.medium.com/max/1120/1*oZjtmox-nEmcnW1NV5GVbw.gif"  height=200>
 </p>
    
-   Gracias por llegar hasta aca 👋😁  
-   Te comparto mi linkedin: https://www.linkedin.com/in/maxi-seidl/
+   ¡Muchas gracias por leer mi trabajo!😁 Me alegra haber sido de tu interés.  
+   Te comparto mi linkedin para que podamos conectarnos y seguir en contacto: https://www.linkedin.com/in/maxi-seidl/  
+   ¡Hasta pronto!👋
    
