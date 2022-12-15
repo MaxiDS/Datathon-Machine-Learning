@@ -78,14 +78,16 @@ https://docs.python.org/3/
   
   - Primero se realizo análisis exploratorio de los datos (EDA) en el cual:
     - Se hizo: verificacion de nulos y duplicados.  
-    - Se controlo la correlacion de los datos por medio de chi2_contingency la cual es una herramienta estadística que se utiliza para determinar si hay una relación significativa entre dos o más variables cualitativas.    
+    - Se controlo la correlacion de los datos por medio chi2_contingency la cual es una herramienta estadística que se utiliza para determinar si hay una relación significativa entre dos o más variables cualitativas.    
     - Una vez encontradas las columnas con las que queriamos trabajar se paso a normalizar los datos mediante "OneHotEncoder" y "LabelEncoder".  
   - Se entreno x e y (dando mejores resutados con un random_state=32).
   
   - Usamos un Pipeline que nos diga que modelo nos daba un mejor rendimiento entre decisiontreeclassifier y regresion logistica, dando por resultado el decisiontreeclassifier. 
   
   - En el proceso de entrenamiento del Arbol dio mejores resultados (depth=19) como parametro, luego lo confirme con cross validation, dandome como resultado:
-  `Accuracy de 77% y un Recall de 83%.`
+  `Accuracy de 77% y un Recall de 83%.`  
+  
+  - Usamos Gridserch para ajustar mejor nuestro modelo, arrojando mejores resultados en produccion.  
   
   - Con nuestro modelo terminado se lo implemento, prediciendo  "csv test" y se genero el csv con los resultados el cual subimos con el nombre "MaxiDS".  
   <hr>  
@@ -95,14 +97,14 @@ https://docs.python.org/3/
    - Se aplico "LabelEncoder" y no OneHotEncoder a la columna "Age" y "Severity of Illness" porque dio un mejor rendimiento en accuracy.  
    - Admission_Deposit (despues de testearlo con y sin esta columna se llego a la conclusion que no se va a eliminar ya que mejora el modelo).
    - cuando se definde X_train e Y_train dan mejor resultados con un random_state=32.  
-   - El Arbol da mejor rendimiento con un depth= 19. 
-   - Nuestro modelo en produccion usando "csv test" como prueba dio los siguientes resultados: `Recall: 80.96%` y `Accuracy: 77.05`
+   - Usando gridserch nos arrojo los siguientes parametros para nuestra mejora en el Arbol: `'criterion': 'gini', 'max_depth': 19, 'random_state': 32, 'splitter': 'best'` 
+   - Nuestro modelo en produccion usando "csv test" como prueba dio los siguientes resultados: `Recall: 81.16%` y `Accuracy: 77.07`
    
    <hr>
    
    ## **6-Conclusiones**  
    
-   Este trabajo me abrió un nuevo horizonte en todo lo que es la programación, hasta este punto no había visto tan en profundidad cómo trabajar con modelos de ML. Aprendí a usar librerías como Sklearn, y Scipy, también consolidar mis conocimientos en Arboles de decisiones🌳. Me voy muy contento de haber podido cumplir con los objetivos propuestos.  
+   Este trabajo me abrió un nuevo horizonte en todo lo que es la programación, hasta este punto no había visto tan en profundidad cómo trabajar con modelos de ML. Aprendí a usar librerías como Sklearn, y Scipy, mejorar el modelo usando Gridserch, también consolidar mis conocimientos en Arboles de decisiones🌳. Me voy muy contento de haber podido cumplir con los objetivos propuestos.  
    <hr>
    
 <p align="center">
