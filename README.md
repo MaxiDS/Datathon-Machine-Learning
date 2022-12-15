@@ -74,22 +74,12 @@ https://docs.python.org/3/
 </p>
   
    
-  Un breve resumen de lo que esta comentado en nuestro notebook:  
-  
-  - Primero se realizo análisis exploratorio de los datos (EDA) en el cual:
-    - Se hizo: verificacion de nulos y duplicados.  
-    - Se controlo la correlacion de los datos por medio chi2_contingency la cual es una herramienta estadística que se utiliza para determinar si hay una relación significativa entre dos o más variables cualitativas.    
-    - Una vez encontradas las columnas con las que queriamos trabajar se paso a normalizar los datos mediante "OneHotEncoder" y "LabelEncoder".  
-  - Se entreno X e Y (dando mejores resutados con un random_state=32).
-  
-  - Usamos un Pipeline que nos diga que modelo nos daba un mejor rendimiento entre decisiontreeclassifier y regresion logistica, dando por resultado el decisiontreeclassifier. 
-  
-  - En el proceso de entrenamiento del Arbol dio mejores resultados (depth=19) como parametro, luego lo confirme con cross validation, dandome como resultado:
-  `Accuracy de 77% y un Recall de 83%.`  
-  
-  - Usamos Gridserch para ajustar mejor nuestro modelo, arrojando mejores resultados en produccion.  
-  
-  - Con nuestro modelo terminado se lo implemento, prediciendo  "csv test" y se genero el csv con los resultados el cual subimos con el nombre "MaxiDS".  
+ Un breve resumen de lo que se comenta en el notebook es que se llevó a cabo un análisis exploratorio de los datos (EDA), en el que se verificaron los valores nulos y duplicados, y se controló la correlación entre las variables mediante la prueba chi2_contingency. Luego, se normalizaron los datos utilizando OneHotEncoder y LabelEncoder.  
+ 
+ Se entrenaron los modelos X e Y, obteniendo mejores resultados con un random_state=32. Se utilizó un Pipeline para comparar el rendimiento de decisiontreeclassifier y regresión logística, y se seleccionó decisiontreeclassifier como el mejor modelo.  
+ 
+ Posteriormente, se utilizó grid search para ajustar los parámetros del modelo y mejorar su rendimiento una vez en producción. Finalmente, se implementó el modelo entrenado para predecir el conjunto de datos "csv test" y se generó un archivo csv con los resultados, que se subió con el nombre "MaxiDS".  
+ 
   <hr>  
   
    ## **5-Observaciones**  
