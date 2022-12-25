@@ -19,6 +19,7 @@
 ## **1-Introducción**  
 
 Hola! 👋 mi nombre es Lucas Maximiliano Seidl y este repositorio contiene mi proyecto individual para el "Datathon - Machine Learning" de la carrera de Data Science en la academia Henry.  
+En este trabajo cree un modelo que puede predecir, a partir de ciertos datos, si un paciente va a permanecer en el hospital durante más o menos de 8 días.
 
 <hr>
 
