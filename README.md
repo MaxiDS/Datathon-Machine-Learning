@@ -48,7 +48,7 @@ Un importante Centro de Salud lo ha contratado con el fin de poder predecir si u
 - Python 🐍  
 Es un lenguaje de programación ampliamente utilizado en las aplicaciones web, el desarrollo de software, la ciencia de datos y el machine learning (ML).  
 https://docs.python.org/3/  
-  - Sklearn 🤖  
+  - Scikit-learn 🤖  
     Es una biblioteca de aprendizaje automático de software gratuito para el lenguaje de programación Python. https://scikit-learn.org/stable/  
   - Pandas 🐼 
   Es una librería de Python especializada en la manipulación y el análisis de datos. Ofrece estructuras de datos y operaciones para manipular tablas numéricas y series temporales, es como el Excel de Python. https://pandas.pydata.org/docs/  
